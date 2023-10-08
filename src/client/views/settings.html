@@ -21,14 +21,44 @@
     <main>
       <div class="settingsContainer">
         <form id="settings__form">
-          <label for="username">Username</label>
-          <input type="text" id="settings-username" name="username" />
 
-          <label for="email">Email</label>
-          <input type="text" id="settings-email" name="email" />
+          <div class="lblinp">
+            <label  class="picLabel" for="profile_pic_input">Edit profile picture</label>
+            <div class="profilePicContainer">
+              <div class="profilePic">
+                <label for="profile_pic_input">
+                  <div class="profilePicOverlay">
+                    <span class="emoji">📷</span>
+                  </div>
+                  <img id="profilePic" src="../public/images/uc.jpeg" alt="" />
+                  <input
+                    type="file"
+                    id="profile_pic_input"
+                    accept="image/*"
+                    style="display: none"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
 
-          <label for="password">Password : </label>
-          <input type="text" id="settings-password" name="password" />
+          <div class="lblinp">
+            <label for="username">Username</label>
+            <input type="text" id="settings-username" name="username" />
+          </div>
+
+          <div class="lblinp">
+            <label for="email">Email</label>
+            <input type="email" id="settings-email" name="email" />
+          </div>
+
+          <div class="lblinp">
+            <label for="password">Password</label>
+            <input type="password" id="settings-password" name="password" />
+          </div>
+
+          <button type="" class="button">SAVE</button>
+          
         </form>
       </div>
     </main>

@@ -22,7 +22,6 @@ exports.userPosts = async (req, res) => {
 
   try {
     let userPosts = await Post.find(query).populate('author');
-    console.log(userPosts)
     res.status(200).json(userPosts)
   } catch (error) {
     return res.status(404).json({ message: error, error: 404 });

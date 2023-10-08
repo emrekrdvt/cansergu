@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* 1 rem 16px */
+.headline {
+  font-family: "Lobster", cursive;
+  margin: 5rem 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Global*/
+
+button,
+input {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Main styling */
+.container {
+  width: min(90%, 500px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form,
+.signup-form {
+  min-width: 100%;
+  display: none;
+}
+
+.login-form.active,
+.signup-form.active {
+  display: block;
+}
+
+#login__form,
+#signup__form {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 100%;
+  margin-top: 1rem;
+}
+
+#login__form input,
+#signup__form input {
+  margin-bottom: 0.75rem;
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  border-bottom: 1px solid;
+}
+#login__form input:focus,
+#signup__form input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#login__form button,
+#signup__form button {
+  padding: 1em 1.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: rgb(33, 33, 33);
+  color: white;
+  /* min-width: 15rem; */
+  margin: 0px auto;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in;
+}
+
+#login__form button:hover,
+#signup__form button:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.error-message.login,
+.error-message.signup {
+  display: none;
+}
+
+.login-error-message,
+.signup-error-message {
+  padding: 10px;
+  margin: 0.5rem 0;
+  color: white;
+  background-color: rgb(211, 60, 60);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.login-error-message.show,
+.signup-error-message.show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-error-message .close-error-message,
+.signup-error-message .close-error-message {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.form-message {
+  margin: 1.5rem 0;
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+#redirect-signup,
+#redirect-login {
+  color: blue;
+  cursor: pointer;
+}
+
+.profileContainer {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+
+.profile-picture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.profile-picture-overlay:hover {
+  opacity: 1;
+}
+
+.emoji {
+  font-size: 36px;
+  color: white;
+}
+
+#profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

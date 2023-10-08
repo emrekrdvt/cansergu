@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+main {
+  width: min(90%, 800px);
+  margin: 0 auto;
+}
+
+header {
+  min-width: 100%;
+  background-color: black;
+  color: white;
+}
+header .rigt__elem span {
+  margin-right: 1rem;
+}
+
+header .rigt__elem span a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+#logout {
+  cursor: pointer;
+}
+
+nav {
+  width: min(90%, 800px);
+  min-height: 3rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+}
+
+.settingsContainer{
+
+}

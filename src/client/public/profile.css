@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* profile style */
+
+main {
+  width: min(90%, 800px);
+  margin: 0 auto;
+}
+
+header {
+  min-width: 100%;
+  background-color: black;
+  color: white;
+}
+header .rigt__elem span {
+  margin-right: 1rem;
+}
+
+header .rigt__elem span a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+#logout {
+  cursor: pointer;
+}
+
+nav {
+  width: min(90%, 800px);
+  min-height: 3rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+}
+
+.profile__header {
+  display: flex;
+  gap: 5rem;
+  margin: 2rem 0;
+}
+
+.profile__thumbnail {
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+  /* background-image: url("../public/images/bir.jpeg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.profile__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.profile__headline {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.profile__details {
+  display: flex;
+  justify-content: space-between;
+  max-width: 20rem;
+}
+
+.profile__posts {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.profile__posts.lessTwo {
+  display: flex;
+}
+
+.profile__post {
+  aspect-ratio: auto 1/1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.profile__post:nth-child(-n + 2) {
+  width: 260px;
+  height: 260px;
+}
+
+@media (max-width: 630px) {
+  .profile__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  header {
+    background-color: white;
+  }
+  #logo {
+    display: none;
+  }
+  .rigt__elem {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .rigt__elem span {
+    position: sticky;
+    margin-right: 0;
+    display: block;
+    padding: 1rem; /* İhtiyaca göre ayarlayabilirsiniz */
+  }
+}

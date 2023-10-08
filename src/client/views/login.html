@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FuFront</title>
+    <link
+      rel="stylesheet"
+      href="../public/login.css
+    "
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="headline">FuFront</h1>
+      <div class="login-form active">
+        <h2>Login</h2>
+        <form id="login__form">
+          <div class="login-error-message">
+            <span class="message">Invalid Credentials</span>
+            <span class="close-error-message">&times;</span>
+          </div>
+
+          <label for="username">Username</label>
+          <input type="text" name="username" id="login-username" />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="login-password" />
+          <button type="">Login</button>
+          <span class="form-message"
+            >You don't have an <span id="redirect-signup">acoount ?</span></span
+          >
+        </form>
+      </div>
+      <div class="signup-form">
+        <h2>Sign up</h2>
+        <form id="signup__form">
+          <div class="signup-error-message">
+            <span class="message">Invalid Credentials</span>
+            <span class="close-error-message">&times;</span>
+          </div>
+
+          <div class="profileContainer">
+            <div class="profile-picture">
+              <label for="profile-picture-input">
+                <div class="profile-picture-overlay">
+                  <span class="emoji">📷</span>
+                </div>
+                <img id="profile-picture" src="#" alt="" />
+                <input
+                  type="file"
+                  id="profile-picture-input"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </label>
+            </div>
+          </div>
+
+          <label for="username">Username</label>
+          <input type="text" name="username" id="signup-username" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="signup-email" />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="signup-password" />
+          <label for="confirm_password">Confirm Password</label>
+          <input
+            type="password"
+            name="confirm_password"
+            id="confirm_password"
+          />
+          <button>Sign Up</button>
+          <span class="form-message"
+            >Already have an <span id="redirect-login">acoount ?</span></span
+          >
+        </form>
+      </div>
+    </div>
+    <script src="../public/client.js"></script>
+  </body>
+</html>

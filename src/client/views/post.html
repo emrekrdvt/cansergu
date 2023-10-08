@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Post</title>
+    <link rel="stylesheet" href="../public/post.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span id="logo">FuFront</span>
+        <div class="rigt__elem">
+          <span><a href="feed.html">Home</a></span>
+          <span><a href="profile.html">Profile</a></span>
+          <span>Post</span>
+          <span>Logout</span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="postContainer">
+        <div class="chooseOne">
+          
+          <div class="fromGalery">
+            <label for="fileInputGalery" class="pickImg">
+              <img src="../public/images/galery.webp" />
+            </label>
+            <input
+              type="file"
+              id="fileInputGalery"
+              name="postImg"
+              style="display: none"
+            />
+          </div>
+
+          <div class="fromCamera">
+            <img class="pickImg" src="../public/images/camera.png" />
+          </div>
+        </div>
+
+        <div class="galeryShow">
+          <div id="choose-galery">
+            <div class="photoHere">
+              <img class="galeryPhoto" src="../public/images/bir.jpeg" alt="" />
+            </div>
+            <textarea
+              class="desc"
+              placeholder="Enter here your mind"
+            ></textarea>
+            <div class="buttons">
+              <a id="share">Share</a>
+              <a id="cancel">Delete</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cameraShow">
+          <div id="choose-camera">
+            <div class="photoHere">
+              <img class="cameraPhoto" src="../public/images/bir.jpeg" alt="" />
+            </div>
+            <div class="stickerSelection"></div>
+            <textarea
+              class="desc"
+              placeholder="Enter here your mind"
+            ></textarea>
+            <div class="buttons">
+              <a>Share</a>
+              <a>Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../public/post.js"></script>
+  </body>
+</html>

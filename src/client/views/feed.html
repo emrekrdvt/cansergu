@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/index.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span id="logo">FuFront</span>
+        <div class="rigt__elem">
+          <span><a href="feed.html">Home</a></span>
+          <span><a href="profile.html" data-username="username">Profile</a></span>
+          <span><a href="post.html">Post</a></span>
+          <span id="logout">Logout</span>
+        </div>
+      </nav>
+    </header>
+    <div class="feed__container">
+      <div class="feed__card">
+        <div class="feed__main__header">
+          <div class="feed__header">
+            <img
+              class="deneme"
+              src="../public/images/bir.jpeg"
+              alt="user-thumbnail"
+            />
+            <h4 class="bold">Migo</h4>
+          </div>
+          <img src="../public/images/moreicon.png" alt="" />
+        </div>
+        <div
+          class="feed__photo"
+          style="background-image: url('../public/images/uc.jpeg')"
+        ></div>
+        <div class="feed__stats">
+          <div class="stats__actions">
+            <span class="change-likes">Like</span>
+            <span class="send-comment">Comment</span>
+          </div>
+          <div class="stats__number">
+            <span id="likes">1.243</span>
+          </div>
+        </div>
+        <div class="feed__desc">
+          <div class="desc__author bold">Migo</div>
+          <div class="desc__text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+            veritatis, maiores fugiat dolorem sequi quae nulla quisquam quod.
+            Possimus consectetur dolorem accusantium minima, facilis adipisci
+            deserunt suscipit in tempora officia a laudantium ut soluta aut
+            repellendus. Porro, sed? Possimus quibusdam sit ipsam eos id
+            temporibus voluptatum blanditiis, laborum non ipsa obcaecati
+            consequatur sed consectetur quisquam expedita mollitia autem
+            praesentium porro, aliquam odit tenetur? Quasi, commodi. Odio quam
+            repudiandae pariatur debitis mollitia quasi voluptatibus beatae
+            cumque cum omnis quia ex optio quo, odit dicta temporibus repellat
+            similique quaerat suscipit sed illo aperiam tempora illum.
+            Repudiandae natus provident temporibus repellat incidunt assumenda?
+          </div>
+        </div>
+        <div class="read__more"><small>...read more</small></div>
+      </div>
+    </div>
+
+    <script src="../public/feed.js"></script>
+  </body>
+</html>

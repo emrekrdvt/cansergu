@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+main {
+  width: min(90%, 600px);
+  margin: 0 auto;
+}
+
+header {
+  min-width: 100%;
+  background-color: black;
+  color: white;
+}
+
+header .rigt__elem span a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+header .rigt__elem span {
+  margin-right: 1rem;
+}
+
+header .rigt__elem span a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  width: min(90%, 800px);
+  min-height: 3rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+}
+
+.postContainer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.chooseOne {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fromGalery .pickImg {
+  margin-top: 10px;
+}
+
+.pickImg {
+  width: 200px;
+}
+
+.galeryShow,
+.cameraShow {
+  min-width: 100%;
+  display: none;
+}
+
+.galeryShow.active,
+.cameraShow.active {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#choose-galery {
+  height: max(90%, 540px);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.galeryPhoto,
+.cameraPhoto {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.desc {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 40px;
+}
+
+.desc:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.buttons {
+  margin: 6px 0 10px 0;
+}
+
+.buttons a {
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons a:hover {
+  background-color: #0056b3;
+}
+
+#choose-camera {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.galeryPhoto {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.stickerSelection {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  /* padding: 10px 0;
+    border: 1px solid black;
+    margin: 0 10px; */
+}
+
+/* Her bir stickerın stilini ayarlayın */
+.sticker {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}

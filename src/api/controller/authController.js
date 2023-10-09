@@ -63,58 +63,16 @@ exports.verify = async (req, res) => {
       },
       { new: true }
     );
-    const htmlResponse = `
-    <html>
-    <head>
-      <style>
-        body {
-          background-image: url("https://i.pinimg.com/originals/f4/1b/92/f41b922d57e3a382b14c7909a46bdd1d.gif");
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          text-align: center;
-        }
-        .content {
-          background-color: rgba(255, 255, 255, 0.8);
-          padding: 20px;
-          border-radius: 10px;
-          display: inline-block;
-        }
-        p {
-          font-size: 16px;
-          color: #333;
-        }
-        a {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: #fff;
-          text-decoration: none;
-          border-radius: 5px;
-          font-size: 14px;
-          margin-top: 10px;
-        }
-  
-      </style>
-    </head>
-    <body>
-      <div class="content">
-        <p>You confirmed your e-mail address:</p>
-        <a href="http://localhost:5500/src/client/views/login.html"
-          >Login</a
-        >
-      </div>
-    </body>
-  </html>
-  `;
-    res.status(200).send(htmlResponse);
+
+    res
+      .status(200)
+      .redirect("http://localhost:5500/src/client/views/verifyMail.html");
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 
 exports.login = async (req, res) => {
-  console.log(req.body);
   try {
     const user = await User.findOne({ username: req.body.username });
     if (!user) return res.status(404).send("user not found");

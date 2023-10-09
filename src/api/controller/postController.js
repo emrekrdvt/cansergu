@@ -46,6 +46,6 @@ exports.likeEvent = async (req, res) => {
     }
     await updatePost.save();
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };

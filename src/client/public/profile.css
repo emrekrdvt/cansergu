@@ -75,11 +75,28 @@ nav {
   background-repeat: no-repeat;
 }
 
+.headContainer{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* justify-content: space-between; */
+}
+
 .profile__stats {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+}
+#followUnfollow {
+  text-decoration: none;
+  height: max-content;
+  width: max-content;
+  border: 1px solid black;
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+margin-left: 5px;
 }
 
 .profile__headline {

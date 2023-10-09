@@ -80,6 +80,6 @@ exports.sendMail = async (mail, token) => {
     `,
     });
   } catch (error) {
-    console.log(error);
+    throw error
   }
 };

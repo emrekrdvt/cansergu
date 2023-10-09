@@ -168,6 +168,9 @@ if (loginContainer) {
     });
     signupForm.addEventListener("submit", async (e) => {
       e.preventDefault();
+      const loadingScreen = document.getElementById("loading-screen");
+      loadingScreen.style.display = "block";
+
       let errorMessageNode = signupError.querySelector(".message");
       let signupFormData = new FormData(signupForm);
       let username = signupFormData.get("username");
@@ -191,13 +194,16 @@ if (loginContainer) {
               body: postFormData,
             }
           );
+          const data = await response.json();
           if (response.ok) {
-            console.log("Kullanıcı başarıyla kaydedildi.");
+            window.location.href = "login.html";
           } else {
-            console.error("Kayıt sırasında bir hata oluştu.");
+            alert(data.message);
+            window.location.reload;
           }
         } catch (error) {
-          console.error("API çağrısı sırasında bir hata oluştu.", error);
+        } finally {
+          loadingScreen.style.display = "none";
         }
       }
       return;

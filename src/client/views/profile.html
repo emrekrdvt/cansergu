@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/profile.css">
+    <link rel="stylesheet" href="../public/profile.css" />
     <title>Profile</title>
   </head>
   <body>
@@ -11,9 +11,9 @@
       <nav>
         <span id="logo">FuFront</span>
         <div class="rigt__elem">
-          <span><a href="feed.html">Home</a></span>
-          <span><a href="post.html">Post</a></span>
-          <span><a href="settings.html">Settings</a></span>
+          <span><a href="feed.html" id="goFeed">Home</a></span>
+          <span><a href="post.html" id="goPost">Post</a></span>
+          <span><a href="settings.html" id="goSettings">Settings</a></span>
           <span id="logout">Logout</span>
         </div>
       </nav>
@@ -22,10 +22,14 @@
       <div class="profile__header">
         <div class="profile__thumbnail"></div>
         <div class="profile__stats">
-          <div class="profile__headline"></div>
+          <div class="headContainer">
+            <div class="profile__headline"></div>
+            <a href="" id="followUnfollow"></a>
+          </div>
           <div class="profile__desc">
             <p id="p__desc">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, reiciendis?
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium, reiciendis?
             </p>
           </div>
           <div class="profile__details">
@@ -36,7 +40,7 @@
         </div>
       </div>
       <div class="profile__posts">
-        <div class="profile__post" ></div>
+        <div class="profile__post"></div>
       </div>
     </main>
     <script src="../public/profile.js"></script>

@@ -3,3 +3,4 @@ src/api/post-images/*
 src/api/node_modules
 src/api/.env
 src/client/public/images/*
+.DS_Store

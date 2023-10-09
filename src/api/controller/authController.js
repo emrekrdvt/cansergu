@@ -55,7 +55,7 @@ exports.verify = async (req, res) => {
       { token: req.query.token },
       {
         $set: {
-          isAtuh: true,
+          isAuth: true,
         },
         $unset: {
           token: "",

@@ -4,7 +4,6 @@ const utils = require("../utils/utils");
 
 
 exports.getUser = async (req, res, next) => {
-  console.log(`geldi`)
   let username = req.params.username
     ? req.params.username.trim().toString()
     : undefined;

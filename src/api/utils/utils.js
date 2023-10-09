@@ -30,37 +30,42 @@ exports.sendMail = async (mail, token) => {
       },
     });
     const info = await transporter.sendMail({
-      from: `"Fred Foo 👻" <${myMail}>`,
+      from: `"FuFront 👻" <${myMail}>`,
       to: `<${mail}>`,
       subject: "Hello from FuFront",
       html: `<html>
       <head>
         <style>
           body {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+          }
+    
+          .content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
           }
-          .content {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-          }
+    
           p {
             font-size: 16px;
-            color: #333;
+            margin: 0;
           }
-          a {
+    
+          a.button {
             display: inline-block;
-            padding: 10px 20px;
             background-color: #007bff;
-            color: #fff;
+            color: #ffffff;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 14px;
             margin-top: 10px;
+          }
+    
+          a.button:hover {
+            background-color: #0056b3;
           }
         </style>
       </head>
@@ -68,11 +73,10 @@ exports.sendMail = async (mail, token) => {
         <div class="content">
           <p>Hello,</p>
           <p>Please click the button below to confirm your account:</p>
-          <a href="http://localhost:4545/api/auth/verify?token=${token}">Confirm</a>
+          <a href="http://localhost:4545/api/auth/verify?token=${token}" class="button">Confirm</a>
         </div>
       </body>
-    </html>
-    
+    </html>    
     `,
     });
   } catch (error) {

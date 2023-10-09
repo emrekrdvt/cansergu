@@ -11,10 +11,12 @@ const postImageStorage = multer.diskStorage({
     cb(null, "post-" + Date.now() + "-" + file.originalname);
   },
 });
-
 const postImageUpload = multer({ storage: postImageStorage });
-
 router.post("/", postImageUpload.single("postImg"), postController.addPost);
+
+
 router.get("/:userId?" , postController.userPosts);
+
+router.put('/like/:username/:postId' , postController.likeEvent)
 
 module.exports = router;

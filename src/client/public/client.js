@@ -132,7 +132,7 @@ if (loginContainer) {
           });
           if (response.ok) {
             const responseData = await response.json();
-            if (responseData.isAtuh) {
+            if (responseData.isAuth) {
               localStorage.setItem("user", JSON.stringify(responseData));
               window.location.href = "feed.html";
             } else {

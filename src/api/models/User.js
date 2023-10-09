@@ -37,7 +37,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    isAtuh: {
+    isAuth: {
       type: Boolean,
       default: false,
     },

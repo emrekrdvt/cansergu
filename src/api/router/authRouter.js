@@ -3,6 +3,7 @@ const authControler = require("../controller/authController");
 const multer = require("multer");
 
 router.post("/login", authControler.login);
+router.get("/verify", authControler.verify);
 
  {
   const storage = multer.diskStorage({

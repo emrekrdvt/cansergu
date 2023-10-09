@@ -33,6 +33,14 @@ const UserSchema = new mongoose.Schema(
     followings: {
       type: [mongoose.Schema.Types.ObjectId],
     },
+    token: {
+      type: String,
+      default: "",
+    },
+    isAtuh: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

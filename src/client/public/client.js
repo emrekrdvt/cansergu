@@ -132,9 +132,13 @@ if (loginContainer) {
           });
           if (response.ok) {
             const responseData = await response.json();
-            console.log(responseData);
-            localStorage.setItem("user", JSON.stringify(responseData));
-            window.location.href = "feed.html";
+            if (responseData.isAtuh) {
+              localStorage.setItem("user", JSON.stringify(responseData));
+              window.location.href = "feed.html";
+            } else {
+              composeErrorMessage("Confirm your mail adress", errorMessageNode);
+              displayErrorMessage(errorMessageNode.closest("div"));
+            }
           } else {
             composeErrorMessage(response.statusText, errorMessageNode);
             displayErrorMessage(errorMessageNode.closest("div"));

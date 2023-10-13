@@ -7,7 +7,7 @@
     <title>Home Page</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav>
         <span id="logo">FuFront</span>
         <div class="rigt__elem">
@@ -18,8 +18,37 @@
         </div>
       </nav>
     </header>
+
     <div class="feed__container">
       <div class="feed__card">
+        <div class="openModal" id="myOpenModal">
+          <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <img class="modal-img" src="../public/images/uc.jpeg" alt="" />
+            <div class="author_info">
+              <h4>Migo</h4>
+              <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Pariatur
+              </span>
+            </div>
+            <div class="commentsContainer">
+              <div class="comments">
+                <img class="img-src" src="../public/images/bir.jpeg" alt="" />
+                <div class="comments-info">
+                  <h4>Ehe</h4>
+                  <span>Askimm cok guzel cikmisssnnn </span>
+                </div>
+                <img src="../public/images/moreicon.png " alt="" />
+              </div>
+            </div>
+            <div class="comment-input-container">
+              <input type="text" class="comment-input" />
+              <button  class="sharebutton">Share</button>
+            </div>
+          </div>
+        </div>
+
         <div class="feed__main__header">
           <div class="feed__header">
             <img
@@ -32,7 +61,6 @@
           <img src="../public/images/moreicon.png" alt="" />
         </div>
         <div
-
           class="feed__photo"
           style="background-image: url('../public/images/uc.jpeg')"
         ></div>
@@ -53,7 +81,7 @@
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
           </div>
         </div>
-        <div class="read__more"><small>...read more</small></div>
+        <div class="read__more"><small id="smallmore">...read more</small></div>
       </div>
     </div>
 

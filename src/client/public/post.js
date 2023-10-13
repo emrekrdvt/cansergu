@@ -22,7 +22,8 @@ const hidePic = () => {
 };
 
 const createPost = async (fileInput) => {
-  const desc = document.querySelector(".desc").value;
+  var desc = document.querySelector(".desc").value;
+
   const user = JSON.parse(localStorage.getItem("user"));
   let postFormData = new FormData();
   postFormData.append("postImg", fileInput);

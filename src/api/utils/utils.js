@@ -17,6 +17,8 @@ exports.updateUserValidationSchema = Joi.object({
   password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{6,30}$")),
 
   email: Joi.string().email(),
+
+  bio: Joi.string(),
 });
 
 exports.sendMail = async (mail, token) => {
@@ -80,6 +82,6 @@ exports.sendMail = async (mail, token) => {
     `,
     });
   } catch (error) {
-    throw error
+    throw error;
   }
 };

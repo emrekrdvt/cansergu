@@ -52,7 +52,7 @@ if (localStorage.getItem("user")) {
       if (user.username == currentUser.username)
         followOrUnfollow.innerHTML = "";
 
-      desc.innerText = user.desc ? user.desc : "";
+      desc.innerText = user.bio ? user.bio : "";
       following.textContent =
         user.followings.length > 0 ? user.followings.length : 0;
       followers.textContent =

@@ -21,16 +21,22 @@
     <main>
       <div class="settingsContainer">
         <form id="settings__form">
-
           <div class="lblinp">
-            <label  class="picLabel" for="profile_pic_input">Edit profile picture</label>
+            <label class="picLabel" for="profile_pic_input"
+              >Edit profile picture</label
+            >
             <div class="profilePicContainer">
               <div class="profilePic">
                 <label for="profile_pic_input">
                   <div class="profilePicOverlay">
                     <span class="emoji">📷</span>
                   </div>
-                  <img id="profilePic" src="../public/images/uc.jpeg" alt="" />
+                  <img
+                    id="profilePic"
+                    class="userProfilePic"
+                    src="../public/images/uc.jpeg"
+                    alt=""
+                  />
                   <input
                     type="file"
                     id="profile_pic_input"
@@ -41,17 +47,16 @@
               </div>
             </div>
           </div>
-          
+
           <div class="lblinp">
             <label for="bio">Bio</label>
             <input type="text" id="settings-bio" name="bio" />
           </div>
-          
+
           <div class="lblinp">
             <label for="username">Username</label>
             <input type="text" id="settings-username" name="username" />
           </div>
-
 
           <div class="lblinp">
             <label for="email">Email</label>
@@ -61,12 +66,14 @@
           <div class="lblinp">
             <label for="password">Password</label>
             <input type="password" id="settings-password" name="password" />
+            <label for="password2">Password Again</label>
+            <input type="password" id="settings-password2" name="password2" />
           </div>
 
-          <button type="" class="button">SAVE</button>
-          
+          <button>SAVE</button>
         </form>
       </div>
     </main>
   </body>
+  <script src="../public/settings.js"></script>
 </html>

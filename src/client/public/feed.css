@@ -74,6 +74,34 @@ nav {
   font-family: "Lobster", cursive;
   font-size: 2rem;
 }
+#search {
+  position: relative;
+  width: 230px;
+}
+
+#denemeamk {
+  display: none;
+}
+#searchBox {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+#searchResults {
+  position: absolute;
+  cursor: pointer;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  border-top: none;
+  max-height: 200px; /* Sonuçları sınırlamak için bir maksimum yükseklik ekleyebilirsiniz */
+  overflow-y: auto; /* Sonuçlar fazla yer kaplarsa kaydırma çubuğu eklenecektir */
+}
 
 /* feed styl */
 
@@ -83,6 +111,19 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.headerChooise {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  gap: 10px;
+}
+.headerChooise span {
+  margin-right: 10px;
+  border: 1px solid black;
+  width: max-content;
+  cursor: pointer;
 }
 
 .feed__card {
@@ -174,9 +215,25 @@ nav {
 }
 
 .commentMore {
-margin-left: auto;
+  margin-left: auto;
   height: 15px;
   width: 15px;
+  cursor: pointer;
+}
+.commentMenu {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+.commentMenu a {
+  padding-left: 2px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  color: inherit;
+}
+.commentMenu a:hover {
+  cursor: pointer;
+  border: 1px solid;
 }
 
 .img-src {
@@ -292,11 +349,14 @@ margin-left: auto;
 @media (max-width: 630px) {
   header {
     background-color: white;
+    z-index: 999;
   }
   #logo {
     display: none;
+    z-index: 999;
   }
   .rigt__elem {
+    z-index: 999;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -313,5 +373,12 @@ margin-left: auto;
     margin-right: 0;
     display: block;
     padding: 1rem; /* İhtiyaca göre ayarlayabilirsiniz */
+  }
+  #denemeamk {
+    display: flex;
+    cursor: pointer;
+  }
+  #search {
+    display: none;
   }
 }

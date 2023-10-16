@@ -16,6 +16,7 @@ router.post("/", postImageUpload.single("postImg"), postController.addPost);
 
 
 router.get("/:userId?" , postController.userPosts);
+router.get("/followingsPost/:username?" , postController.followingsPosts);
 
 router.put('/like/:username/:postId' , postController.likeEvent)
 

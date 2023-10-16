@@ -10,7 +10,13 @@
     <header id="header">
       <nav>
         <span id="logo">FuFront</span>
+        <div id="search">
+         
+          <input type="text" id="searchBox" placeholder="Search">
+          <div id="searchResults"></div>
+        </div>
         <div class="rigt__elem">
+          <span id="denemeamk">A</span>
           <span><a href="feed.html">Home</a></span>
           <span><a id="profileNav">Profile</a></span>
           <span><a href="post.html">Post</a></span>
@@ -18,7 +24,10 @@
         </div>
       </nav>
     </header>
-
+    <div class="headerChooise">
+      <span id="followingsPost">Followings</span>
+      <span id="recentPost">Recent</span>
+    </div>
     <div class="feed__container">
       <div class="feed__card">
         <div class="openModal" id="myOpenModal">
@@ -39,12 +48,16 @@
                   <h4>Ehe</h4>
                   <span>Askimm cok guzel cikmisssnnn </span>
                 </div>
-                <img src="../public/images/moreicon.png " alt="" />
+                <img
+                  src="../public/images/moreicon.png"
+                  class="commentMore"
+                  alt=""
+                />
               </div>
             </div>
             <div class="comment-input-container">
               <input type="text" class="comment-input" />
-              <button  class="sharebutton">Share</button>
+              <button class="sharebutton">Share</button>
             </div>
           </div>
         </div>

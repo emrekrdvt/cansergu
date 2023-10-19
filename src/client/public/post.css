@@ -139,6 +139,21 @@ nav {
   cursor: pointer;
 }
 
+.snapBtn{
+  margin: 0 10px;
+  padding: 5px 10px;
+  top: 3px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#canvas{
+  height: max-content;
+  width: max-content;
+}
+
 .buttons a:hover {
   background-color: #0056b3;
 }
@@ -169,11 +184,9 @@ nav {
     border: 1px solid black;
     margin: 0 10px; */
 }
-
-/* Her bir stickerın stilini ayarlayın */
 .sticker {
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   cursor: pointer;
 }

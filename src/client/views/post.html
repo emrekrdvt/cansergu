@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create a Post</title>
     <link rel="stylesheet" href="../public/post.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -21,7 +25,6 @@
     <main>
       <div class="postContainer">
         <div class="chooseOne">
-          
           <div class="fromGalery">
             <label for="fileInputGalery" class="pickImg">
               <img src="../public/images/galery.webp" />
@@ -35,7 +38,11 @@
           </div>
 
           <div class="fromCamera">
-            <img class="pickImg" src="../public/images/camera.png" />
+            <img
+              class="pickImg"
+              id="pckCmr"
+              src="../public/images/camera.png"
+            />
           </div>
         </div>
 
@@ -58,7 +65,19 @@
         <div class="cameraShow">
           <div id="choose-camera">
             <div class="photoHere">
-              <img class="cameraPhoto" src="../public/images/bir.jpeg" alt="" />
+              <div>
+                <video
+                  id="webCam"
+                  autoplay
+                  playsinline
+                  width="600"
+                  height="400"
+                ></video>
+                <a class="snapBtn">SNAP</a>
+              </div>
+              <div id="canvas-container">
+                <canvas id="canvas"></canvas>
+              </div>
             </div>
             <div class="stickerSelection"></div>
             <textarea

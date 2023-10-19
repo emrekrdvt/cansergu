@@ -10,8 +10,8 @@ const showPic = (flag) => {
     showGalery.classList.add("active");
     showCamera.classList.remove("active");
   } else if (flag === 2) {
-    showCamera.classList.remove("active");
-    showGalery.classList.add("active");
+    showCamera.classList.add("active");
+    showGalery.classList.remove("active");
   }
 };
 const hidePic = () => {
@@ -49,6 +49,7 @@ if (postContainer) {
   const chooseOptions = document.querySelector(".chooseOne");
   const galeryOption = chooseOptions.querySelector(".fromGalery");
   const cameraOption = chooseOptions.querySelector(".fromCamera");
+  const pckCamera = document.getElementById("pckCmr");
   const picGalery = document.getElementById("fileInputGalery");
   const galeryPhoto = document.querySelector(".galeryPhoto");
   var fileInput;
@@ -64,6 +65,21 @@ if (postContainer) {
       reader.readAsDataURL(fileInput);
     }
   });
+
+  pckCamera.addEventListener("click", (e) => {
+    showPic(2);
+
+    const webCamElement = document.getElementById("webCam");
+    const snapBtn = document.querySelector(".snapBtn");
+    const canvaElem = document.getElementById("canvas");
+    const webcam = new Webcam(webCamElement, "user", canvaElem);
+    webcam.start();
+    snapBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const webcamCanvas = webcam.snap();
+    });
+  });
+
   const share = document.getElementById("share");
   const cancel = document.getElementById("cancel");
 
@@ -79,33 +95,59 @@ if (postContainer) {
 
 {
   const stickerSelection = document.querySelector(".stickerSelection");
-
   const stickers = ["cat1.png", "cat2.png", "cat3.png", "cat4.png"];
 
   stickers.forEach((sticker) => {
     const stickerImg = document.createElement("img");
-    stickerImg.src = `../public/images/stickers/${sticker}`; // Stickerların bulunduğu dizini güncelleyin
+    stickerImg.src = `../public/images/stickers/${sticker}`;
 
     stickerImg.alt = "Sticker";
     stickerImg.className = "sticker";
-    stickerImg.addEventListener("click", () => {
-      // Seçilen sticker'ı fotoğrafa ekleyen bir işlevi burada çağırabilirsiniz
-      // Örneğin, seçilen sticker'ı textarea içine veya fotoğrafın üstüne ekleyebilirsiniz
+
+    stickerImg.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", sticker);
     });
+
     stickerSelection.appendChild(stickerImg);
   });
 
-  // Scroll olayını dinle
+  const canvasContainer = document.getElementById("canvas-container");
+  const canvas = document.getElementById("canvas");
+  const context = canvas.getContext("2d");
+
+  canvasContainer.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+
+  canvasContainer.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const sticker = e.dataTransfer.getData("text/plain");
+    const stickerImg = new Image();
+    stickerImg.src = `../public/images/stickers/${sticker}`;
+
+    const x = e.clientX - canvasContainer.getBoundingClientRect().left;
+    const y = e.clientY - canvasContainer.getBoundingClientRect().top;
+
+    if (x + stickerImg.width / 2 > canvas.width / 2) {
+      context.drawImage(
+        stickerImg,
+        canvas.width - x - stickerImg.width,
+        y,
+        stickerImg.width,
+        stickerImg.height
+      );
+    } else {
+      context.drawImage(stickerImg, x, y, stickerImg.width, stickerImg.height);
+    }
+  });
+
   stickerSelection.addEventListener("wheel", (e) => {
-    // Mouse tekerleği yukarı kaydırılırsa sola kaydır
+    // yukari ise sola kaydir
     if (e.deltaY < 0) {
-      stickerSelection.scrollLeft -= 20; // İstediğiniz kaydırma mesafesini ayarlayabilirsiniz
+      stickerSelection.scrollLeft -= 20;
+    } else {
+      stickerSelection.scrollLeft += 20;
     }
-    // Mouse tekerleği aşağı kaydırılırsa sağa kaydır
-    else {
-      stickerSelection.scrollLeft += 20; // İstediğiniz kaydırma mesafesini ayarlayabilirsiniz
-    }
-    // Scroll olayını engelleme
     e.preventDefault();
   });
 }
